@@ -4,160 +4,142 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900" rel="stylesheet">
-    <title>Hemanth Dhamodharan Candidate Profile | Mortgage Field Operations Intern</title>
     
+    <title>Hemanth Dhamodharan Candidate Profile | Mortgage Field Operations Intern</title>
+
     <style>
         
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Source Sans Pro', sans-serif;
-            color: #333;
             line-height: 1.6;
-            background-color: #f4f7f6;
+            color: #333;
+            background-color: #f9f9f9;
         }
 
         
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Roboto', sans-serif;
+            letter-spacing: 1.5px !important;
             text-transform: uppercase;
-            letter-spacing: 1.5px !important; /* REQUIRED FORMATTING */
             font-weight: 700;
         }
+
         
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
+        :root {
+            --pulte-navy: #002D62; 
+            --pulte-blue: #005eb8;
+            --pulte-gold: #bfa15f;
+            --pulte-gray: #f4f4f4;
+            --text-dark: #2c3e50;
         }
 
         
-        header {
-            background-color: #ffffff;
-            border-bottom: 4px solid #005587; /* Pulte Blue style */
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-text {
-            color: #005587;
-            font-size: 24px;
+
+        section {
+            padding: 40px 0;
+            background: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         
         .hero {
-            background: linear-gradient(135deg, #005587 0%, #003359 100%);
-            color: white;
-            padding: 60px 0;
+            background-color: var(--pulte-navy);
+            color: #fff;
             text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 0;
         }
+
         .hero h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fff;
         }
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto;
+
+        .hero h2 {
+            font-size: 1.2rem;
             font-weight: 300;
+            color: #ddd;
+            margin-bottom: 20px;
         }
-        .cta-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 25px;
-            background-color: #fff;
-            color: #005587;
+
+        .btn-cta {
+            background-color: var(--pulte-gold);
+            color: var(--pulte-navy);
+            padding: 12px 25px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px !important;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-cta:hover {
+            background-color: #d4b76e;
         }
 
         
-        section {
-            padding: 50px 0;
-            background: #fff;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-        .section-title {
-            color: #005587;
-            border-bottom: 2px solid #e0e0e0;
+        .section-header {
+            border-bottom: 2px solid var(--pulte-navy);
             padding-bottom: 10px;
-            margin-bottom: 30px;
-            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--pulte-navy);
+            font-size: 1.5rem;
         }
 
         
-        .skills-grid {
+        ul {
+            list-style-position: inside;
+            margin-left: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+
+        .skill-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-        .skill-category h3 {
-            font-size: 16px;
-            color: #444;
-            margin-bottom: 10px;
-        }
-        .skill-list {
-            list-style: none;
-        }
-        .skill-list li {
-            background: #f0f4f8;
-            margin-bottom: 5px;
-            padding: 8px 12px;
-            border-left: 3px solid #005587;
-            font-size: 14px;
+
+        .skill-card {
+            background: var(--pulte-gray);
+            padding: 15px;
+            border-left: 4px solid var(--pulte-navy);
         }
 
-        
-        .job-card {
-            margin-bottom: 30px;
-        }
-        .job-header {
-            display: flex;
-            justify-content: space-between;
+        .skill-card h4 {
+            color: var(--pulte-navy);
+            font-size: 1rem;
             margin-bottom: 10px;
-        }
-        .job-title {
-            font-weight: 700;
-            color: #222;
-        }
-        .job-date {
-            color: #666;
-            font-style: italic;
-        }
-        .job-tech {
-            font-size: 12px;
-            color: #005587;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        ul.bullet-points {
-            margin-left: 20px;
-        }
-        ul.bullet-points li {
-            margin-bottom: 6px;
         }
 
         
         .linkedin-note {
             background-color: #e3f2fd;
-            padding: 15px;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #0d47a1;
-            margin-top: 15px;
             border: 1px solid #bbdefb;
+            color: #0d47a1;
+            padding: 15px;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            border-radius: 4px;
         }
 
         
@@ -165,149 +147,137 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 30px 0;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
         }
-        footer a { color: #fff; text-decoration: underline; }
 
         
-        
-        @media (max-width: 768px) {
-            .header-content { flex-direction: column; }
-            .hero h1 { font-size: 28px; }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container header-content">
-            <div class="logo-text">
-                <strong>HEMANTH DHAMODHARAN CANDIDATE PORTFOLIO</strong> | UNT BCIS SENIOR
-            </div>
+    <header class="hero">
+        <div class="container">
+            <h1>Business Computer Information Systems Student</h1>
+            <h2>Hemanth Dhamodharan Candidate for Mortgage Field Operations Summer 2026 Intern</h2>
+            <p style="margin-top: 10px; font-weight: 300; letter-spacing: 1px;">University of North Texas | Class of 2026</p>
+            <br>
+            <a href="mailto:hemanthdhamodharan@my.unt.edu" class="btn-cta">CONTACT ME</a>
         </div>
     </header>
 
-    <div class="hero">
-        <div class="container">
-            <h1>MORTGAGE FIELD OPERATIONS INTERN CANDIDATE</h1>
-            <p>Business Computer Information Systems Student (GPA 3.2) ready to support Pulte Mortgage in Coppell, TX with Data Analytics, SQL, Excel, and Process Automation.</p>
-            <a href="mailto:hemanthdhamodharan@my.unt.edu" class="cta-btn">CONTACT ME</a>
-        </div>
-    </div>
-
     <div class="container">
         <section>
-            <h2 class="section-title">PROFESSIONAL PROFILE</h2>
-            <p>Detail oriented Business Computer Information Systems senior passionate about solving real world problems using data analytics and AI applications. I bring hands on experience building automated systems for data tracking and reporting.</p>
-            <br>
-            <p><strong>Value to Pulte Mortgage:</strong> Eager to support field operations through accurate reporting, mortgage process tracking, and operational analysis using SQL, Excel, and Python. I am ready to engage with business partners and contribute to the "people first" culture at Pulte.</p>
+            <h3 class="section-header">Professional Profile</h3>
+            <p>
+                Detail oriented and motivated Business Computer Information Systems senior. Passionate about solving real world problems using data analytics and AI applications. Offering hands on experience in building automated systems for data tracking and reporting using SQL, Excel, and Python. Eager to support Pulte Mortgage’s field operations by ensuring accurate reporting, facilitating mortgage process tracking, and optimizing operational analysis.
+            </p>
         </section>
 
         <section>
-            <h2 class="section-title">RELEVANT TECHNICAL SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>DATA ANALYSIS & OPS TOOLS</h3>
-                    <ul class="skill-list">
-                        <li>Microsoft Excel (MOS Associate Certified)</li>
-                        <li>Tableau & Power BI (Dashboards)</li>
-                        <li>SQL (IBM Db2, MySQL)</li>
-                        <li>Google Sheets & Workspace</li>
+            <h3 class="section-header">Alignment with Mortgage Field Operations</h3>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h4>Data & Reporting Accuracy</h4>
+                    <ul>
+                        <li>Capable of handling daily, weekly, and monthly reports as requested in the internship description.</li>
+                        <li>Microsoft Office Specialist (Excel Associate) certified.</li>
+                        <li>Experience generating complex queries for business intelligence tracking.</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>PROGRAMMING & AUTOMATION</h3>
-                    <ul class="skill-list">
-                        <li>Python (Pandas, Automation)</li>
-                        <li>Core Java (OOP Concepts)</li>
-                        <li>HTML / CSS / JavaScript</li>
-                        <li>Mainframe Concepts (COBOL, JCL)</li>
+                <div class="skill-card">
+                    <h4>Process & Systems</h4>
+                    <ul>
+                        <li>Strong tech-savvy competency with IBM Z Xplore, SQL, and Python.</li>
+                        <li>Ready to learn mortgage systems for rate lock extensions and loan tracking.</li>
+                        <li>Analytical mindset developed through Data Science simulations.</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>CERTIFICATIONS</h3>
-                    <ul class="skill-list">
-                        <li>Microsoft Office Specialist: Excel Associate</li>
-                        <li>IBM Z Xplore Advanced Badge</li>
-                        <li>Quantium Data Analytics Job Simulation</li>
-                        <li>BCG Data Science Job Simulation</li>
+                <div class="skill-card">
+                    <h4>Communication & Operations</h4>
+                    <ul>
+                        <li>Prepared to facilitate communication between loan consultants and builder partners.</li>
+                        <li>Professional verbal and written skills for high-level sales meetings.</li>
+                        <li>Organized and actionable approach to setting up training meetings.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title">PROJECT EXPERIENCE & IMPACT</h2>
+            <h3 class="section-header">Technical Competencies</h3>
+            <ul>
+                <li><strong>Languages:</strong> Python, SQL, Core Java, HTML, CSS, JavaScript, C++, C, COBOL</li>
+                <li><strong>Analysis Tools:</strong> Excel (Advanced), Tableau, Power BI, Jupyter Notebooks, Google Sheets</li>
+                <li><strong>Platforms:</strong> Microsoft Office Suite (Teams/Excel), Linux, Windows, Visio</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 class="section-header">Education</h3>
+            <p><strong>University of North Texas, Denton, TX</strong><br>
+            Bachelor of Science in Business Computer Information Systems<br>
+            Expected Graduation: May 2026 | GPA: 3.2</p>
             
-            <div class="job-card">
-                <div class="job-header">
-                    <span class="job-title">Campground Reservation Database System</span>
-                    <span class="job-date">Spring 2025</span>
-                </div>
-                <div class="job-tech">SQL | IBM Db2 | Data Integrity</div>
-                <ul class="bullet-points">
-                    <li>Designed 4+ table schemas using keys and indexes to ensure 100% data integrity for operational records.</li>
-                    <li>Developed complex SQL queries using joins/aggregations to extract actionable business intelligence.</li>
-                    <li>Analyzed occupancy trends to assist in resource allocation and operational planning.</li>
-                </ul>
-            </div>
-
-            <div class="job-card">
-                <div class="job-header">
-                    <span class="job-title">Product Profitability & Geographic Analysis</span>
-                    <span class="job-date">Fall 2024</span>
-                </div>
-                <div class="job-tech">Tableau | Business Intelligence | Reporting</div>
-                <ul class="bullet-points">
-                    <li>Created interactive dashboards visualizing sales and profit metrics to identify performance gaps.</li>
-                    <li>Used color coded indicators to highlight variances between product lines (Furniture vs. Tech).</li>
-                    <li>Applied filters to reveal profit deficits, enabling data driven strategic decisions.</li>
-                </ul>
-            </div>
-
-            <div class="job-card">
-                <div class="job-header">
-                    <span class="job-title">Library Management System Automation</span>
-                    <span class="job-date">Summer 2024</span>
-                </div>
-                <div class="job-tech">Python | Process Tracking | OOP</div>
-                <ul class="bullet-points">
-                    <li>Utilized Python to manage inventory catalogs (Books, CDs) using JSON for structured data storage.</li>
-                    <li>Implemented CRUD operations allowing users to efficiently manage member details and loan records.</li>
-                    <li>Developed automated features for status tracking and overdue fine calculations to reduce manual error.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title">EDUCATION</h2>
-            <div style="margin-bottom: 15px;">
-                <strong>University of North Texas, Denton, TX</strong><br>
-                Bachelor of Science in Business Computer Information Systems<br>
-                <span style="color: #666;">Expected Graduation: May 2026 | GPA: 3.2</span>
-            </div>
-
-            <p><strong>Relevant Technical Coursework:</strong></p>
-            <ul class="bullet-points" style="margin-top:5px; display:grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+            <br>
+            <h4 style="font-size: 0.9rem; margin-bottom: 5px;">Relevant Resume Coursework:</h4>
+            <ul style="font-size: 0.9rem;">
                 <li>Data Analysis (Excel)</li>
                 <li>Business Statistics with Spreadsheets</li>
-                <li>Enterprise Programming (Java/MySQL)</li>
-                <li>Intro to Database Applications (SQL)</li>
-                <li>Mainframe Concepts (COBOL)</li>
-                <li>Administration & Policy in Information Security</li>
+                <li>Introduction to Database Applications (SQL)</li>
+                <li>Enterprise Programming</li>
             </ul>
 
             <div class="linkedin-note">
-                <strong>Please Note:</strong> My full academic background, including courses in <strong>Accounting Principles (I & II), Micro/Macroeconomics, Finance, and Analysis of Business Information Systems</strong>, is detailed on my LinkedIn profile to avoid confusion.
+                <strong>NOTE FOR HR TEAM:</strong> To avoid confusion regarding my transcript, the following courses are completed but listed on my LinkedIn profile (not my PDF resume): Accounting Principles I & II, Principles of Microeconomics/Macroeconomics, Finance, and Analysis of Business Information Systems.
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-header">Key Projects & Certifications</h3>
+            
+            <div style="margin-bottom: 20px;">
+                <h4>Campground Reservation Database System (SQL)</h4>
+                <ul>
+                    <li>Designed 4+ table schemas using keys and indexes to ensure data integrity.</li>
+                    <li>Developed 7+ complex SQL queries for business intelligence and trend analysis.</li>
+                    <li>Analyzed occupancy trends, directly applicable to tracking housing/mortgage data trends.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4>Product Profitability Analysis (Tableau)</h4>
+                <ul>
+                    <li>Created interactive dashboards visualizing sales metrics.</li>
+                    <li>Applied region-specific filters to reveal profit deficits, demonstrating analytical problem-solving.</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4>Library Management System (Python)</h4>
+                <ul>
+                    <li>Implemented CRUD operations for inventory management.</li>
+                    <li>Developed automated features for status tracking, similar to tracking loan status progression.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Relevant Certifications</h4>
+                <ul>
+                    <li><strong>Microsoft Office Specialist:</strong> Excel Associate (Excel 2019)</li>
+                    <li><strong>IBM Z Xplore Advanced Badge:</strong> Data Set Management & Operations</li>
+                    <li><strong>Quantium Data Analytics Job Simulation:</strong> Data Cleaning & Validation</li>
+                </ul>
             </div>
         </section>
     </div>
 
     <footer>
-        <div class="container">
-            <p>Created by Hemanth Dhamodharan for Pulte Mortgage Internship Application</p>
-            <p>Denton, TX | <a href="mailto:hemanthdhamodharan@my.unt.edu">Email Me</a></p>
-        </div>
+        <p style="margin-top: 5px; opacity: 0.7;">Created by Hemanth Dhamodharan for the Pulte Financial Services 2026 Internship Program.</p>
     </footer>
 
 </body>
